@@ -118,7 +118,7 @@ class neuralNetwork:
 
 #number of input, hidden and output nodes
 input_nodes = 784
-hidden_nodes = 50
+hidden_nodes = 200
 output_nodes = 10
 
 #learning raet
@@ -136,7 +136,7 @@ training_data_list = training_data_file.readlines()
 training_data_file.close()
 
 #train the network
-epochs = 2
+epochs = 7
 
 for e in range(epochs):
     for record in training_data_list:
@@ -202,18 +202,19 @@ print("performance = " , scorecard_array.sum() / scorecard_array.size)
 # In[214]:
 
 #run the network backwards
-
+#
+#
 #the label to test
-label = 9
+#label = 9
 #create the targets
-targets = numpy.zeros(output_nodes) + 0.01
+#targets = numpy.zeros(output_nodes) + 0.01
 #turn on the target index
-targets[label] = 0.99
+#targets[label] = 0.99
 
-image_data = n.backquery(targets)
+#image_data = n.backquery(targets)
 
 # plot image data
-matplotlib.pyplot.imshow(image_data.reshape(28,28), cmap='Greys', interpolation='None')
+#matplotlib.pyplot.imshow(image_data.reshape(28,28), cmap='Greys', interpolation='None')
 
 
 # In[ ]:
